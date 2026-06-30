@@ -34,6 +34,9 @@ function initNavigation() {
     let touchStartX = 0;
     document.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
     document.addEventListener('touchend', e => {
+        // Ignore swipe if the user is swiping on the photo gallery (Swiper)
+        if (e.target.closest('.swiper')) return;
+
         let touchEndX = e.changedTouches[0].screenX;
         if (touchEndX < touchStartX - 50) goToSlide(currentSlide + 1); // Swipe left -> next
         if (touchEndX > touchStartX + 50) goToSlide(currentSlide - 1); // Swipe right -> prev
