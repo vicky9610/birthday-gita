@@ -411,7 +411,7 @@ body {
   z-index: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 40px 20px;
+  padding: 40px 30px;
 }
 
 /* Safe flexbox vertical centering that degrades gracefully on overflow */
@@ -548,6 +548,11 @@ body {
   border-radius: 0 0 10px 10px;
   cursor: pointer;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: margin-top 0.8s ease-in-out;
+}
+
+.envelope-wrapper.open {
+  margin-top: 100px;
 }
 
 .envelope-flap {
@@ -593,7 +598,8 @@ body {
 
 .envelope-wrapper.open .letter {
   transform: translateY(-120px);
-  z-index: 2; /* Keep it behind the envelope's front pocket (z-index 3) */
+  z-index: 2;
+  /* Keep it behind the envelope's front pocket (z-index 3) */
   height: 350px;
 }
 
