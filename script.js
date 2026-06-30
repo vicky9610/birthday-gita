@@ -203,6 +203,7 @@ function playSlideAnimations(slideIndex) {
                 slide.setAttribute('data-src', imgUrl);
                 const img = document.createElement('img');
                 img.src = imgUrl;
+                img.loading = "lazy"; // Fixes massive network and memory lag!
                 img.onerror = function () { this.src = fallbackUrl; slide.setAttribute('data-src', fallbackUrl); };
 
                 slide.appendChild(img);
@@ -214,7 +215,7 @@ function playSlideAnimations(slideIndex) {
                 grabCursor: true,
                 centeredSlides: true,
                 slidesPerView: "auto",
-                coverflowEffect: { rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true },
+                coverflowEffect: { rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: false }, // slideShadows: true is extremely laggy on 80+ items
                 pagination: { el: ".swiper-pagination" },
                 autoplay: {
                     delay: 2500,
@@ -456,7 +457,7 @@ function initBackgroundPhotos() {
     const container = document.getElementById('bg-photos-container');
     if (!container || container.children.length > 0) return;
 
-    const maxBubbles = 25; // Massive performance boost: only animate 25 DOM elements at once
+    const maxBubbles = 10; // Massive performance boost: reduced from 25 to 10 to prevent GPU/CPU lag on mobile
 
     for (let i = 0; i < maxBubbles; i++) {
         const div = document.createElement('div');
