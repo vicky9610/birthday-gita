@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Error: Love Not Found... Until I Met You ❤️</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- LightGallery CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-thumbnail.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Decorative Top Lights -->
+  <ul class="light-rope">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <!-- Audio Player (Background Music) -->
+  <audio id="bg-music" loop>
+    <source src="music/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Sound Effects -->
+  <audio id="sfx-click"
+    src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_3464d6db28.mp3?filename=click-button-140881.mp3"></audio>
+  <audio id="sfx-magic"
+    src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_b200b3e570.mp3?filename=magical-twinkle-144270.mp3"></audio>
+
+  <!-- Ambient Backgrounds -->
+  <div id="bg-photos-container" class="fixed-bg"></div>
+  <div id="tsparticles" class="fixed-bg"></div>
+  <div id="tsparticles-hearts" class="fixed-bg"></div>
+  <div class="cursor-glow"></div>
+
+  <!-- Global Navigation Overlay -->
+  <div id="navigation-overlay" class="hidden">
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <div class="nav-buttons">
+      <button id="btn-prev" class="nav-btn"><i class="fa-solid fa-arrow-left"></i></button>
+      <div id="slide-indicator" class="font-poppins">1 / 14</div>
+      <button id="btn-next" class="nav-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- ===============================
+       SLIDES (100vh Sections)
+  ==================================== -->
+
+  <div id="slides-container">
+
+    <!-- 1. Opening Experience -->
+    <section id="slide-1" class="slide active">
+      <div class="terminal-loader font-fira">
+        <div id="terminal-text" class="text-green glow-green"></div>
+        <div class="loading-bar-container mt-4 hidden" id="loader-ui">
+          <div class="loading-bar">
+            <div class="fill"></div>
+          </div>
+          <p class="mt-2 text-white glow-white">Loading Memories... <span id="load-pct">0</span>%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Massive Hero -->
+    <section id="slide-2" class="slide hidden">
+      <div class="hero-content text-center">
+        <h1 id="hero-typing" class="font-playfair glow-white text-5xl md:text-7xl"></h1>
+        <img src="photos/photo4.jpg" alt="My Love" class="hero-photo hidden" id="hero-photo">
+        <p class="font-dancing text-2xl mt-4 text-pink">The universe aligned the day I met you.</p>
+        <button class="glass-btn mt-8 start-btn font-poppins">Start Our Story ✨</button>
+      </div>
+    </section>
+
+    <!-- 3. Relationship Counter -->
+    <section id="slide-3" class="slide hidden">
+      <div class="glass-panel text-center">
+        <h2 class="font-playfair text-3xl mb-8">Every Second With You Is A Gift</h2>
+        <div class="time-grid font-fira text-4xl glow-pink">
+          <div><span id="c-years">0</span>
+            <p class="text-sm font-poppins mt-2">Years</p>
+          </div>
+          <div><span id="c-months">0</span>
+            <p class="text-sm font-poppins mt-2">Months</p>
+          </div>
+          <div><span id="c-days">0</span>
+            <p class="text-sm font-poppins mt-2">Days</p>
+          </div>
+          <div><span id="c-hours">0</span>
+            <p class="text-sm font-poppins mt-2">Hours</p>
+          </div>
+          <div><span id="c-mins">0</span>
+            <p class="text-sm font-poppins mt-2">Mins</p>
+          </div>
+          <div><span id="c-secs">0</span>
+            <p class="text-sm font-poppins mt-2">Secs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Love Letter -->
+    <section id="slide-4" class="slide hidden flex-center">
+      <div class="envelope-wrapper" id="envelope-wrapper">
+        <div class="envelope-flap"></div>
+        <div class="letter paper-texture text-dark p-6">
+          <h3 class="font-dancing text-3xl mb-4 text-center">My Dearest Gita,</h3>
+          <div id="letter-typing" class="font-poppins text-sm leading-relaxed text-left"></div>
+        </div>
+        <div class="envelope-front"></div>
+        <div class="click-indicator glow-white text-sm font-poppins">Tap to Open</div>
+      </div>
+    </section>
+
+    <!-- 5. Timeline -->
+    <section id="slide-5" class="slide hidden">
+      <h2 class="font-playfair text-4xl text-center mb-8">Our Journey</h2>
+      <div class="timeline-container">
+        <!-- Injected via JS for animation sequencing -->
+      </div>
+    </section>
+
+    <!-- 6. Photo Memories (Swiper + LightGallery) -->
+    <section id="slide-6" class="slide hidden">
+      <h2 class="font-playfair text-4xl text-center mb-4">A Lifetime of Memories</h2>
+      <p class="font-poppins text-sm text-center mb-8 opacity-70">Swipe & Tap to view in Fullscreen</p>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper" id="photo-gallery">
+          <!-- 60+ Photos Injected dynamically -->
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- 7. 100 Reasons Why -->
+    <section id="slide-7" class="slide hidden flex-center flex-col">
+      <h2 class="font-playfair text-4xl mb-8">Why I Love You</h2>
+      <div class="reasons-stack relative w-64 h-80 cursor-pointer" id="reasons-deck">
+        <!-- Cards injected via JS -->
+      </div>
+      <p class="font-poppins text-sm mt-8 opacity-70">Tap the card to reveal more</p>
+    </section>
+
+    <!-- 8. VS Code Theme -->
+    <section id="slide-8" class="slide hidden flex-center">
+      <div class="mac-window glass w-full max-w-2xl">
+        <div class="mac-header">
+          <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span
+              class="dot green"></span></div>
+          <div class="mac-title font-poppins text-xs opacity-50">girlfriend.js</div>
+        </div>
+        <div class="mac-body terminal-font p-6 text-sm">
+          <pre><code id="code-typing"></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Terminal -->
+    <section id="slide-9" class="slide hidden flex-center">
+      <div class="terminal-pure w-full max-w-xl font-fira text-green p-6">
+        <p>C:\LOVE> <span id="term-cmd"></span></p>
+        <div id="term-output" class="mt-4 hidden">
+          <p>Installing Happiness...</p>
+          <div class="install-bar mt-2 border border-green w-full h-4 relative">
+            <div id="install-fill" class="bg-green h-full w-0 transition-all duration-300"></div>
+          </div>
+          <p id="term-success" class="mt-4 glow-green hidden">Love Installed Successfully ❤️</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Birthday Cake -->
+    <section id="slide-10" class="slide hidden flex-center flex-col">
+      <h2 class="font-playfair text-4xl mb-16 glow-white" id="cake-title">Make a Wish ✨</h2>
+      <div class="cake-container">
+        <!-- Left Half (Has Candle) -->
+        <div class="cake-3d cake-left" id="cake-left">
+          <div class="plate"></div>
+          <div class="cake-layer layer-bottom"></div>
+          <div class="cake-layer layer-middle"></div>
+          <div class="cake-layer layer-top">
+            <div class="drips"></div>
+          </div>
+          <div class="candle">
+            <div class="flame out" id="cake-flame"></div>
+          </div>
+        </div>
+        <!-- Right Half -->
+        <div class="cake-3d cake-right" id="cake-right">
+          <div class="plate"></div>
+          <div class="cake-layer layer-bottom"></div>
+          <div class="cake-layer layer-middle"></div>
+          <div class="cake-layer layer-top">
+            <div class="drips"></div>
+          </div>
+        </div>
+      </div>
+      <button id="light-cake-btn" class="glass-btn mt-16 font-poppins">Light Candle 🔥</button>
+      <button id="blow-cake-btn" class="glass-btn mt-16 font-poppins hidden">Blow Candles 💨</button>
+      <button id="cut-cake-btn" class="glass-btn mt-16 font-poppins hidden">Cut Cake 🔪</button>
+    </section>
+
+    <!-- 11. Memory Quiz -->
+    <section id="slide-11" class="slide hidden flex-center flex-col">
+      <div class="glass-panel p-8 max-w-lg w-full text-center">
+        <h2 class="font-poppins text-2xl mb-8" id="quiz-q">Who loves who more?</h2>
+        <div class="flex flex-col gap-4" id="quiz-opts">
+          <button class="glass-btn w-full" onclick="checkQuiz(false)">You</button>
+          <button class="glass-btn w-full" onclick="checkQuiz(true)">Me</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Promises -->
+    <section id="slide-12" class="slide hidden flex-center flex-col">
+      <h2 class="font-playfair text-4xl mb-12 glow-white">I Promise...</h2>
+      <div class="promise-cards-container flex gap-6 flex-wrap justify-center max-w-4xl" id="promise-container">
+        <!-- Promises generated via JS -->
+      </div>
+    </section>
+
+    <!-- 13. Future Dreams -->
+    <section id="slide-13" class="slide hidden flex-center flex-col">
+      <h2 class="font-playfair text-4xl mb-12 glow-white">Our Future</h2>
+      <ul class="dreams-list font-poppins text-xl space-y-6 text-left max-w-md w-full" id="dreams-list">
+        <!-- Injected via JS -->
+      </ul>
+    </section>
+
+    <!-- 14. Final Surprise -->
+    <section id="slide-14" class="slide hidden flex-center flex-col">
+      <div class="final-text text-center" id="final-text">
+        <!-- Typed out slowly -->
+      </div>
+      <div class="finale-reveal hidden text-center mt-8">
+        <h1 class="font-dancing text-6xl md:text-8xl glow-pink mb-6">Happy Birthday!</h1>
+        <p class="font-poppins text-xl glow-white">Thank you for being the best part of my life.</p>
+        <p class="font-fira text-sm mt-12 opacity-50">Made with ❤️ by Your Favorite Programmer</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+  <!-- Main Logic -->
+  <script src="script.js"></script>
+</body>
+
+</html>
